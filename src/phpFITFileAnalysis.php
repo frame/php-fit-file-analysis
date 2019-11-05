@@ -747,6 +747,8 @@ class phpFITFileAnalysis
                 35 => ['field_name' => 'training_stress_score',           'scale' => 10,        'offset' => 0, 'units' => 'tss'],
                 36 => ['field_name' => 'intensity_factor',                'scale' => 1000,      'offset' => 0, 'units' => 'if'],
                 37 => ['field_name' => 'left_right_balance',              'scale' => 1,         'offset' => 0, 'units' => ''],
+                38 => ['field_name' => 'unknown_position_lat',            'scale' => 1,         'offset' => 0, 'units' => 'semicircles'],
+                39 => ['field_name' => 'unknown_position_long',           'scale' => 1,         'offset' => 0, 'units' => 'semicircles'],
                 41 => ['field_name' => 'avg_stroke_count',                'scale' => 10,        'offset' => 0, 'units' => 'strokes/lap'],
                 42 => ['field_name' => 'avg_stroke_distance',             'scale' => 100,       'offset' => 0, 'units' => 'm'],
                 43 => ['field_name' => 'swim_stroke',                     'scale' => 1,         'offset' => 0, 'units' => 'swim_stroke'],
