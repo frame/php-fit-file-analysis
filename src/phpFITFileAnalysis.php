@@ -14,7 +14,11 @@ namespace adriangibbons;
  *
  * Rafael Nájera edits:
  * Added code to support compressed timestamps (March 2017).
+ * 
+* Bernd Kilga edits:
+ * Added support for PHP 7.3 and diving related event (November 2019).
  *
+ * https://github.com/frame/php-fit-file-analysis
  * https://github.com/adriangibbons/phpFITFileAnalysis
  * http://www.thisisant.com/resources/fit
  */
