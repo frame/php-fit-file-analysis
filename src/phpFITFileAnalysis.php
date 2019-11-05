@@ -915,6 +915,7 @@ class phpFITFileAnalysis
                 83 => ['field_name' => 'vertical_ratio',                   'scale' => 100,       'offset' => 0,   'units' => 'percent'],
                 84 => ['field_name' => 'stance_time_balance',              'scale' => 100,       'offset' => 0,   'units' => 'percent'],
                 85 => ['field_name' => 'step_length',                      'scale' => 10,        'offset' => 0,   'units' => 'mm'],
+                92 => ['field_name' => 'depth',                            'scale' => 1000,       'offset' => 0,   'units' => 'm'],
                 253 => ['field_name' => 'timestamp',                       'scale' => 1,         'offset' => 0,   'units' => 's']
             ]
         ],
@@ -2556,6 +2557,7 @@ class phpFITFileAnalysis
         $cadence           = ($all || in_array('cadence', $data_required));
         $power             = ($all || in_array('power', $data_required));
         $quadrant_analysis = ($all || in_array('quadrant-analysis', $data_required));
+        $depth             = ($all || in_array('depth', $data_required));
         
         $for_json = [];
         $for_json['fix_data'] = isset($this->options['fix_data']) ? $this->options['fix_data'] : null;
