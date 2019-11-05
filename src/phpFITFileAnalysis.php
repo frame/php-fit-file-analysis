@@ -2314,7 +2314,7 @@ class phpFITFileAnalysis
             }
             $is_paused[$i] = $bPaused;
         }
-        $is_paused[$last_ts] = end($this->data_mesgs['record']['speed']) == 0 ? true : false;
+        $is_paused[$last_ts] = (isset($this->data_mesgs['record']['speed']) && (is_array($this->data_mesgs['record']['speed']) || $this->data_mesgs['record']['speed'] instanceof Countable) && end($this->data_mesgs['record']['speed']) == 0) ? true : false;
         
         return $is_paused;
     }
@@ -2702,7 +2702,7 @@ class phpFITFileAnalysis
             echo '<table class=\'table table-condensed table-striped\'>';
             echo '<thead><th>'.$mesg_key.'</th><th>count()</th></thead><tbody>';
             foreach ($mesg as $field_key => $field) {
-                echo '<tr><td>'.$field_key.'</td><td>'.count($field).'</td></tr>';
+                echo '<tr><td>'.$field_key.'</td><td>'.((is_array($field) || $field instanceof Countable) ? count($field) : '0').'</td></tr>';
             }
             echo '</tbody></table><br><br>';
         }
